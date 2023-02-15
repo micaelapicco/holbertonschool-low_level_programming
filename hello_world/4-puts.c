@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 	int main (void)
-	{int puts (const char *s="\"Programming is like building a mulilingual puzzle"
-			return (0)
+	
+	{puts ("\"Programming is like building a mulilingual puzzle");
+			return (0);
 	}
