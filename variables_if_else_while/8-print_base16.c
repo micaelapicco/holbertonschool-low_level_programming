@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main: hexadecimal base
+ * main - hexadecimal base
  *
  * Return: Always 0 (Success)
  */
