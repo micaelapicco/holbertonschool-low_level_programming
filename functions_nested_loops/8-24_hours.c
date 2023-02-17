@@ -17,15 +17,16 @@ void jack_bauer(void)
 	{
 		a = a / 10;
 		b = a % 10;
-		_putchar(a);
-		_putchar(b);
-		_putchar(':');
 		for (c = 0; c <= 59; c++)
 		{
-		c = c / 10;
-		d = c % 10;
-		_putchar(c);
-		_putchar(d);
+			_putchar(a + '0');
+			_putchar(b + '0');
+			_putchar(':');
+			c = c / 10;
+			d = c % 10;
+			_putchar(c + '0');
+			_putchar(d + '0');
+			_putchar('\n');
 		}
 	}
 }
