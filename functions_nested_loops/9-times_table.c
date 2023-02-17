@@ -14,18 +14,26 @@ void times_table(void)
 		for (f = 0; f <= 9; f++)
 		{
 			r = c * f;
-				if (r > 10)
-				{
-					_putchar(r / 10 + '0');
-					_putchar(r % 10 + '0');
-					_putchar(',');
-				}
-				else
-				{
-					_putchar(r);
-					_putchar(',');
-				}
+			if (r >= 10)
+			{
+				_putchar(r / 10 + '0');
+				_putchar(r % 10 + '0');
+			}
+			else if (f != 0)
+			{
+				_putchar(' ');
+				_putchar(r + '0');
+			}
+			else
+			{
+				_putchar(r + '0');
+			}
+			if (f != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
-		_putchar('\n');
+	_putchar('\n');
 	}
 }
