@@ -3,7 +3,7 @@
 /**
  * print_diagonal - Write a function that draws a diagonal on the terminal.
  * @n: line
- * @space: space
+ *
  * Return: Always 0 (Success)
  */
 void print_diagonal(int n)
