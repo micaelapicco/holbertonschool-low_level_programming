@@ -3,11 +3,13 @@
 /**
  * print_diagonal - Write a function that draws a diagonal on the terminal.
  * @n: line
+ * @space: space
  * Return: Always 0 (Success)
  */
 void print_diagonal(int n)
 {
 	int m;
+	int space;
 
 	if (n == 0)
 	{
@@ -15,6 +17,13 @@ void print_diagonal(int n)
 	}
 	else
 	{
+		n = space;
+		space = 0;
+		while (space <= n)
+		{
+			space++;
+			_putchar(' ');
+		}
 		for (m = 0; m < n; m++)
 		{
 			_putchar('\\');
