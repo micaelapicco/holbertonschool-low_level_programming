@@ -1,11 +1,11 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point
- *
+ * reset_to_98 - update value
+ * @n: number
  * Return: Always 0 (Success)
  */
-int main(void)
+void reset_to_98(int *n)
 {
-    return (0);
+	*n = 98;
 }
