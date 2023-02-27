@@ -2,8 +2,7 @@
 
 /**
  * rev_string - string
- * @r: reverse
- * @c: count
+ * @s: string
  * Return: Always 0 (Success)
  */
 void rev_string(char *s)
