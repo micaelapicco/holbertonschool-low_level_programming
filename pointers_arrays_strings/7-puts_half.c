@@ -7,13 +7,22 @@
  */
 void puts_half(char *str)
 {
-	int n, half; /*numbers, half numbers*/
+	int n; /*numbers,par,inpar, half numbers*/
 
 	for (n = 0; str[n]; n++)
 		;
-	for (half = n; half < n / 2; half++)
+	if (n % 2 == 0)
+	{	
+		n = n / 2;
+	}
+	else
 	{
-		_putchar(half);
+		n = ((n + 1) / 2);
+	}
+	while (str[n])
+	{
+		_putchar(str[n]);
+		n++;
 	}
 	_putchar('\n');
 }
