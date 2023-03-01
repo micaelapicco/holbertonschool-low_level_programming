@@ -7,13 +7,25 @@
  * Return: Always 0 (Success)
  */
 int _atoi(char *s)
-{
-	int r = 0;
-
-	while ((*s >= '0') && (*s <= '9'))
-	{
-		r = (r * 10) + ((*s) - '0');
+{	
+	unsigned int n = 0;
+	int sign = 1;
+	
+	while (*s != '\n')
+	{	
+		if (*s == '-')
+		{
+		sign = sign * -1;
+		}
+		else if (*s >= 48 && *s <= 57)
+		{	 
+		n = n * 10 + (*s - '0');
+		}
+		else if (n > 0)
+		{
+			break;
+		}
 		s++;
 	}
-	return(r);
+	return (n * sign);
 }
