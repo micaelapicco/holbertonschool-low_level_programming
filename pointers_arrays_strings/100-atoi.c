@@ -7,9 +7,10 @@
  * Return: Always 0 (Success)
  */
 int _atoi(char *s)
-{	
+{
 	unsigned int n = 0;
 	int sign = 1;
+
 	while (*s != '\n')
 	{
 		if (*s == '-')
