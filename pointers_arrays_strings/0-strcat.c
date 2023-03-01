@@ -3,7 +3,7 @@
 
 /**
  * _strcat - concatenate strings
- * @*dest: destination
+ * @dest: destination
  * @src: source
  * Return: Always 0 (Success)
  */
