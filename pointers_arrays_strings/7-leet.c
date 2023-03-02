@@ -10,19 +10,18 @@ char *leet(char *a)
 {
 	int s; /*string*/
 	int let; /*letter*/
-	char l[] = {'a', 'e', 'o', 't', 'l', 'A', 'E', 'O', 'T', 'L'};
-	char n[] = {'4', '3', '0', '7', '1', '4', '3', '0', '7', '1'};
+	char l[10] = {'a', 'e', 'o', 't', 'l', 'A', 'E', 'O', 'T', 'L'};
+	int n[10] = {'4', '3', '0', '7', '1', '4', '3', '0', '7', '1'};
 
-	for (let = 0; l[let]; let++)
+	for (let = 0; a[let]; let++)
 	{
-		for (s = 0; a[s] != '\0'; s++)
+		for (s = 0; l[s]; s++)
 		{
-			if (a[s] == l[let])
+			if (a[let] == l[s])
 			{
-				a[s] = n[let];
+				a[let] = n[s];
 			}
 		}
 	}
 	return (a);
 }
-
