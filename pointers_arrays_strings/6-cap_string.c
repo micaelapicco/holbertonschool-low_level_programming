@@ -9,7 +9,7 @@ char *cap_string(char *a)
 {
 	int l; /*letter*/
 	int se; /*separator*/
-	char s[13] = {32, 33, 34, 63, 123, 125, 40, 41, 59, 10, 9, 44};
+	char s[13] = {32, 33, 34, 63, 123, 125, 40, 41, 59, 10, 9, 44, 46};
 
 	for (l = 0; a[l] != '\0'; l++)
 	{
@@ -25,5 +25,5 @@ char *cap_string(char *a)
 			}
 		}
 	}
-	return  (a);
+	return (a);
 }
