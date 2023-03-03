@@ -2,18 +2,18 @@
 #include "main.h"
 /**
  * _memset -  fills memory with a constant byte
- * @n: fills the first n bytes
- * @s: of the memory area pointed to s
+ * @n: number of byte to be filled starting from s to be filled
+ * @s: pointer to the destination object
  * @b: with the constant byte b
  * Return: Always 0 (Success)
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	while (n > 0)
+	unsigned int len;
+
+	for (len = 0; len < n; len++)
 	{
-		*s = b;
-		s++;
-		n--;
+		s[len] = b;
 	}
 	return (s);
 }
