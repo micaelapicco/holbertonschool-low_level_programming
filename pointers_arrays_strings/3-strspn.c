@@ -11,9 +11,9 @@ unsigned int _strspn(char *s, char *accept)
 	int ps, pa;
 	unsigned int num = 0; /*position s y accept*/
 
-	for (ps = 0; s[ps]; ps++)
+	for (ps = 0; s[ps] != '\0'; ps++)
 	{
-		for (pa = 0; s[pa]; pa++)
+		for (pa = 0; s[pa] != '\0'; pa++)
 		{
 			if (s[ps] == accept[pa])
 			{
@@ -21,7 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		if (s[ps] == '\0')
+		if (s[pa] == '\0')
 		{
 			return (num);
 		}
