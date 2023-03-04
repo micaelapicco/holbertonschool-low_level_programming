@@ -7,7 +7,7 @@
  */
 int _strlen(char *s)
 {
-	int c;
+	int c; /*with c, move for string until '\0' (null)*/
 
 	for (c = 0; s[c]; c++)
 	{

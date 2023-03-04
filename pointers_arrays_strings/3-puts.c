@@ -7,7 +7,7 @@
  */
 void _puts(char *str)
 {
-	int c;
+	int c; /*with c, move to string until NULL and print c locate of string*/
 
 	for (c = 0; c[str]; c++)
 	{

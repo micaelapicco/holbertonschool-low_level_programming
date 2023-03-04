@@ -8,8 +8,9 @@
  */
 void swap_int(int *a, int *b)
 {
-	int c;
-
+	int c; /* c = is a temporal variable, so im assign a to temp,
+		  b to a, and temp to b*/
+	
 	c = *a;
 	*a = *b;
 	*b = c;
