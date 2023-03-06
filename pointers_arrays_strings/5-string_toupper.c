@@ -9,6 +9,9 @@
 char *string_toupper(char *a)
 {
 	int l;
+	
+	/*move on string a and if char is between 97 or 122 (min)
+	 *rest 32 ascii table, and it changes lower to upper*/
 
 	for (l = 0; a[l]; l++)
 	{

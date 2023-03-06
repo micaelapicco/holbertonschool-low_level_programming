@@ -7,7 +7,7 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	char *point = dest;
+	char *point = dest; /*make a pointer poin, move on string source until '\0' and save in destination source and move by source and destination, then return destination and point because the task says twice*/ 
 
 	while (*src != '\0')
 	{

@@ -9,8 +9,9 @@
 int _atoi(char *s)
 {
 	unsigned int n = 0;
-	int sign = 1;
+	int sign = 1; 
 
+/*move on string s, if strinf is sign or letter (48 - 122 ascii) tranformate on int with *10 +s 10, return with sign by string*/
 	while (*s != '\n')
 	{
 		if (*s == '-')

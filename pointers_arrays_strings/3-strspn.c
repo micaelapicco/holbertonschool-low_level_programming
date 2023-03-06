@@ -8,9 +8,12 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int ps, pa;
-	unsigned int num = 0; /*position s y accept*/
+	int ps, pa; /*position string s, position string accept*/
+	unsigned int num = 0; /*save bytes (lenght)*/
 
+	/*move on string with ps and pa, if the same char save position
+	 * in num and return the loop.
+	 * when string is '\0' return the last num saved*/
 	for (ps = 0; s[ps] != '\0'; ps++)
 	{
 		for (pa = 0; s[pa] != '\0'; pa++)

@@ -7,7 +7,8 @@
  */
 void puts_half(char *str)
 {
-	int n; /*numbers,par,inpar, half numbers*/
+	int n; /*numbers*/
+/* with n move on string str, if n is par (% 2= 0) save n/2, else n sum 1 and divide 2 (inpar) and print str in n locates*/
 
 	for (n = 0; str[n]; n++)
 		;

@@ -10,8 +10,10 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int d;
-	int s;
+	int d, s;
+
+/*it is the similar that strcat except use at most number bytes from source. 
+ *first moves on dest with d and moves on source with s if s is less than n*/
 
 	for (d = 0; dest[d] != '\0'; d++)
 	{

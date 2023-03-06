@@ -13,6 +13,8 @@ char *leet(char *a)
 	char l[10] = {'a', 'e', 'o', 't', 'l', 'A', 'E', 'O', 'T', 'L'};
 	int n[10] = {'4', '3', '0', '7', '1', '4', '3', '0', '7', '1'};
 
+	/*with let move on string a, if let is same as l(some characters i
+	 * want change for others (n)), save a let = n(string)*/
 	for (let = 0; a[let]; let++)
 	{
 		for (s = 0; l[s]; s++)

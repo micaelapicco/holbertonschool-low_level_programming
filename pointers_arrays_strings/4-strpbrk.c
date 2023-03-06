@@ -11,6 +11,9 @@ char *_strpbrk(char *s, char *accept)
 {
 	int pa;
 
+	/*move on string accept with pa, if the same as string return
+	 * the string*/
+
 	while (*s != '\0')
 	{
 		for (pa = 0; accept[pa]; pa++)

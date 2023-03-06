@@ -9,6 +9,8 @@
  */
 char *_strchr(char *s, char c)
 {
+	/*move on string s until '\0', if *s is the same as character c
+	 * return and move un by one s. if diferent return null*/
 	while (*s != '\0')
 	{
 		if (*s == c)

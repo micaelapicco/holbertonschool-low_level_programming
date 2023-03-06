@@ -10,6 +10,8 @@ void print_array(int *a, int n)
 {
 	int r;/*position*/
 
+/* with r move on string until n (number of elements of the array) and print r location of a(array), if r == n -1 because is '\0' else print coma (separator)*/
+
 	for (r = 0; r < n; r++)
 	{
 		printf("%d", a[r]);

@@ -10,6 +10,9 @@ void reverse_array(int *a, int n)
 {
 	int string, left;
 
+	/* string is a temporal variable, and with left moves on string 
+	 * until n bytes*/
+
 	for (left = 0; left < n / 2; left++)
 	{
 		string = a[left];

@@ -11,6 +11,9 @@ char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int len;
 
+	/*move on string s with len until n and suply with constant chatacter
+	 * b*/
+
 	for (len = 0; len < n; len++)
 	{
 		s[len] = b;
