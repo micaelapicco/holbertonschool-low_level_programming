@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "name file?" 
+read name
+echo '#include "main.h"' > $name
+echo '#include <stdio.h>' >> $name
+echo '/**
+ * main -
+ * @:
+ * Return: Nothing.
+ */' >> $name
+chmod u+x $name
+vi $name
+
