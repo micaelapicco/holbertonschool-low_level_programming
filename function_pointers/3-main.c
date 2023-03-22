@@ -10,10 +10,11 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[3]);
-	int result, operator;
+	int num1, num2, result, operator;
 	int (*f)(int, int);
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 
 	if (argc != 4)
 	{
