@@ -13,15 +13,14 @@ int main(int argc, char *argv[])
 	int num1, num2, result, operator;
 	int (*f)(int, int);
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
-
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
 	operator = argv[2][0];
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 
 	f = get_op_func(argv[2]);
 	if (!f || argv[2][1] != '\0')
