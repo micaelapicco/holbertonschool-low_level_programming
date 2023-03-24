@@ -12,4 +12,9 @@ typedef struct letter
 	char *letter;
 	void (*f)(va_list list);
 } list_f;
+
+void print_c(va_list list);
+void print_i(va_list list);
+void print_f(va_list list);
+void print_s(va_list list);
 #endif
