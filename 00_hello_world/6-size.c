@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - calculate the sizeof of variables
  *
  * Return: Always 0(Success)
  */
