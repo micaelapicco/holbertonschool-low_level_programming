@@ -11,7 +11,7 @@
 - What are **header files** and how to to use them with `#include`
 
 ## Requirements
- Allowed editors: `vi, vim, emacs`
+- Allowed editors: `vi, vim, emacs`
 - All your files will be compiled on Ubuntu 20.04 LTS using `gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89`
 - All your files should *end with a new line*
 - There should be no errors and no warnings during compilation
