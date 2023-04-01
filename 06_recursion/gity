@@ -1,7 +1,0 @@
-#!/bin/bash
-git add .
-echo "commit name?"
-read commit
-git commit -m $commit
-git push
-
