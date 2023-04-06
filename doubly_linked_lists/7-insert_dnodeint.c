@@ -29,11 +29,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	/*node in other position (idx)*/
 	else
 	{
-		for (; i < (idx - 1); i++) /*find the before position with -1*/
+		while (aux != NULL && i < (idx - 1)) /*find the before position with -1*/
 		{
 			aux = aux->next;
-			if (aux == NULL)
-				return (NULL);
+			i++;
 		}
 	}
 	new->next = aux->next; /*change pointers*/

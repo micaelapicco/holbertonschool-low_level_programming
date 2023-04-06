@@ -11,6 +11,7 @@
 int main(void)
 {
     dlistint_t *head;
+    dlistint_t *node;
 
     head = NULL;
     add_dnodeint_end(&head, 0);
@@ -24,6 +25,9 @@ int main(void)
     print_dlistint(head);
     printf("-----------------\n");
     insert_dnodeint_at_index(&head, 5, 4096);
+    node = insert_dnodeint_at_index(&head, 0, 98);
+        if (node)
+                printf("-> %d\n", node->n);
     print_dlistint(head);
     free_dlistint(head);
     head = NULL;
