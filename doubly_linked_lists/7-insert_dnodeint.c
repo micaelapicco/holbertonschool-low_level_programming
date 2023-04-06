@@ -30,6 +30,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	else /*node in other position (idx)*/
 	{
+		if (idx == 1)
+			(*h) = new;
+		new->n = n;
 		for (; i < (idx - 1); i++) /*find the before position with -1*/
 		{
 			aux = aux->next;
