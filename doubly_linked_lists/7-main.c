@@ -24,8 +24,8 @@ int main(void)
     add_dnodeint_end(&head, 1024);
     print_dlistint(head);
     printf("-----------------\n");
-    insert_dnodeint_at_index(&head, 8, 4096);
-    node = insert_dnodeint_at_index(&head, 7, 98);
+    insert_dnodeint_at_index(&head, 2, 4096);
+    node = insert_dnodeint_at_index(&head, 1, 98);
         if (node)
                 printf("-> %d\n", node->n);
     print_dlistint(head);
