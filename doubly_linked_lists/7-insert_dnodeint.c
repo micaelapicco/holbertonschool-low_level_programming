@@ -9,35 +9,51 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new = NULL;
-	dlistint_t *aux = *h;
+	dlistint_t *aux = *h, *temp;
 	unsigned int i = 0;
 
 	/*asign memory new node*/
 	new = malloc(sizeof(dlistint_t));
 
 	/*check malloc works*/
-	if (!new)
+	if (!new || !aux)
 		return (NULL);
 	/*asign value new node*/
 	new->n = n;
-	/*new node at the beginning*/
-	if (idx == 0 || !h || !(*h))
-		return (add_dnodeint(h, n));
-	/*new node at the end*/
-	if (aux->next == NULL)
-		return (add_dnodeint_end(h, n));
-	/*node in other position (idx)*/
+	/*new node is at the beginning*/
+	if (!*h)
+	{
+		new->next = NULL;
+		new->prev = NULL;
+		aux = new;
+		return (aux);
+	}
+	else if (aux->next == NULL)
+	{
+		new->prev = aux;
+		new->next = NULL;
+		aux->next = new;
+	}
+	else if (idx == 0)
+	{
+		new->prev = NULL;
+		new->next = aux;
+		aux->prev = new;
+		aux = new;
+		return (new);
+	}
 	else
 	{
-		while (aux != NULL && i < (idx - 1)) /*find the before position with -1*/
+		while (aux != NULL && i < (idx -1))
 		{
 			aux = aux->next;
 			i++;
 		}
 	}
-	new->next = aux->next; /*change pointers*/
+	temp = aux->next;
+	new->next = temp;
+	new->prev = aux;
 	aux->next = new;
-	new->prev = aux->prev;
-	aux->prev = new;
+	temp->prev = new;
 	return (new);
 }
