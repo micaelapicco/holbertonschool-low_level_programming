@@ -11,7 +11,8 @@ unsigned int binary_to_uint(const char *b)
 
 	if (!b)
 		return (0);
-
+	/* move on b pointer and move result, if b is 1 save result
+	 * and return result*/
 	for (; *b; b++)
 	{
 		result <<= 1;
