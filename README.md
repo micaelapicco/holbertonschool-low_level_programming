@@ -21,6 +21,9 @@ In this repository you will find tasks and projects from the first trimester of 
 - Structures and typedef
 - Function pointers
 - Variadic functions
+- Singly linked lists
+- Doubly linked lists
+- Bit manipulation
 
 ## Update
 April, 2023
