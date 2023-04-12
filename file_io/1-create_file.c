@@ -1,5 +1,23 @@
 #include "main.h"
 /**
+ * _memcpy - copy memory area
+ * @n: copy n bytes from
+ * @src: source memory
+ * @dest: to destination memory area
+ * Return: Always 0 (Success)
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int s; /*variable*/
+
+	for (s = 0; s < n; s++)
+	{
+		dest[s] = src[s];
+	}
+
+	return (dest);
+}
+/**
  * create_file - function that creates a file
  * @filename: file
  * @text_content: content of filename
@@ -34,22 +52,4 @@ int create_file(const char *filename, char *text_content)
 	close(file);
 	free(buffer);
 	return (1);
-}
-/**
- * _memcpy - copy memory area
- * @n: copy n bytes from
- * @src: source memory
- * @dest: to destination memory area
- * Return: Always 0 (Success)
- */
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int s; /*variable*/
-
-	for (s = 0; s < n; s++)
-	{
-		dest[s] = src[s];
-	}
-
-	return (dest);
 }
