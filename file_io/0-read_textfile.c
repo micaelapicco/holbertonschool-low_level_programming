@@ -9,36 +9,32 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file;
-	ssize_t let, read_count = 0;
-	char *text;
-	/*check if filename exist and create buffer for text*/
-	if (filename == NULL)
+	int file, rd, wr;
+	char *buffer;
+
+	if (!filename)
 		return (0);
 
-	text = malloc(sizeof(char) * letters);
-	if (text == NULL)
+	buffer = malloc(letters);
+	if (!buffer)
 		return (0);
-	/*check if file open correctly*/
-	file = open(filename, O_RDONLY);
+
+	file = open(filename, O_RDWR);
+
 	if (file == -1)
-	{
-		free(text);
 		return (0);
-	}
-	/*let read file and save numbers of char, if fails free text*/
-	/* and close the file, return error*/
-	while ((let = read(file, text, letters)) > 0)
-	{
-		read_count += let;
-		if (write(STDOUT_FILENO, text, let) != let)
-		{
-			free(text);
-			close(file);
-			return (0);
-		}
-	}
-	free(text);
-	close(file);
-	return (read_count);
+
+	rd = read(file, buffer, letters);
+	if (rd == -1)
+		return (0);
+
+	wr = write(STDOUT_FILENO, buffer, rd);
+
+	if (wr == -1)
+		return (0);
+
+	close(rd);
+	free(buffer);
+	return (wr);
+
 }
