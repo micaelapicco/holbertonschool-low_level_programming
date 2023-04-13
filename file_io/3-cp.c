@@ -19,12 +19,12 @@ int main(int argc, char *argv[])
 
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (file_to == -1)
-		dprintf(2, "Error: Can't read to %s\n", argv[2]), exit(98);
+		dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
 	while (len != '\0')
 	{
 		len = read(file_from, buffer, 1024);
 		if (len == -1)
-			dprintf(2, "Error: Can't write from file %s\n", argv[1]), exit(99);
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
 		if (write(file_to, buffer, len) != len)
 			dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
