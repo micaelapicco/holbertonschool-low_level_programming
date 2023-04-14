@@ -18,14 +18,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((unsigned char *) key, ht->size);
 	new = (hash_node_t *)malloc(sizeof(hash_node_t));
-	if (!new)
+	if (!new || !newkey || !newvalue)
+	{
+		if (new)
+			free(new);
+		if (newkey)
+			free(newkey);
+		if (newvalue)
+			free(newvalue);
 		return (0);
+	}
 
 	new->key = newkey;
 	new->value = newvalue;
 
 	if (ht->array[index] == NULL)
 		ht->array[index] = new;
+	new = new->next;
 
 	else
 	{
