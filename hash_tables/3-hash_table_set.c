@@ -33,8 +33,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->value = newvalue;
 
 	if (ht->array[index] == NULL)
-		ht->array[index] = new;
-	new = new->next;
+	{	ht->array[index] = new;
+		new = new->next; }
 
 	else
 	{
