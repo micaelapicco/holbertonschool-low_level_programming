@@ -24,6 +24,8 @@ In this repository you will find tasks and projects from the first trimester of 
 - Singly linked lists
 - Doubly linked lists
 - Bit manipulation
+- File i/o
+- Hash tables
 
 ## Update
 April, 2023
