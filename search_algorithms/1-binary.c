@@ -6,27 +6,28 @@
  * @array: array to search
  * @size: size of array
  * @value: value to search into array
- * Return: Always EXIT_SUCCESS
+ * Return: index or -1 if fails
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int l = 0, r = size, m;
+	int l = 0, r, m;
 
-	while (l < r)
+	if (!array || size == 0)
+		return (-1);
+
+	r = size - 1;
+
+	while (l <= r)
 	{
-		print_array(l, r - 1, array);
-		m = ((l + r) / 2);
-		if (array[m] == value)
-		{
-			return (m);
-		}
+		print_array(l, r, array);
+		m = (l + r) / 2;
 
-		else if (value > array[m])
-		{
-			l = m + 1;
-		}
-		else
+		if (array[m] == value)
+			return (m);
+		if (array[m] > value)
 			r = m - 1;
+		else
+			l = m + 1;
 	}
 	return (-1);
 }
