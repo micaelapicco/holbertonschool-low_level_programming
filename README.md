@@ -26,6 +26,7 @@ In this repository you will find tasks and projects from the first trimester of 
 - Bit manipulation
 - File i/o
 - Hash tables
+- Search algotithms
 
 ## Update
-April, 2023
+May, 2023
