@@ -3,7 +3,7 @@
 /**
  * main - fizz buzz
  *
- * Return: Always 0 (Success)
+ * Return: Fizz Buzz
  */
 int main(void)
 {
